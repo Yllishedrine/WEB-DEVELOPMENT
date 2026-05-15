@@ -1,0 +1,137 @@
+:root{
+    --bg: #0f172a;
+    --card: #111827;
+    --text: #e5e7eb;
+    --muted: #9ca3af;
+    --primary: #22c55e;
+    --danger: #ef4444;
+    --border: #1f2937;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: var(--text);
+    display: grid;
+    place-items: center;
+    padding: 20px;
+}
+
+.app{
+    width: 100%;
+    max-width: 560px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+}
+
+h1{
+    margin: 0 0 14px;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.input-row{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+input[type="text"]{
+    width: 100%;
+    border: 1px solid var(--border);
+    background: #0b1220;
+    color: var(--text);
+    padding: 12px;
+    border-radius: 10px;
+    outline: none;
+}
+
+input[type="text"]:focus{
+    border-color: #334155;
+}
+
+button{
+    border: none;
+    border-radius: 10px;
+    padding: 10px 14px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.add-btn{
+    background: var(--primary);
+    color: white;
+}
+
+.filters{
+    display: flex;
+    gap: 8px;
+    margin: 6px 0 14px;
+    flex-wrap: wrap;
+}
+
+.filter-btn{
+    background: #1e293b;
+    color: white;
+}
+
+.filter-btn.active{
+    background: #334155;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 8px;
+}
+
+.todo-item{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+    align-items: center;
+    background: #0b1220;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.todo-item.complete span{
+    text-decoration: line-through;
+    color: var(--muted);
+}
+
+.delete-btn{
+    background: transparent;
+    color: var(--danger);
+    border: 1px solid rgba(239, 68, 68, 0.4);
+    padding: 6px 10px;
+}
+
+.footer{
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.clear-btn{
+    background: transparent;
+    color: #fca5a5;
+    border: 1px solid rgba(252, 165, 165, 0.4);
+    padding: 6px 10px;
+}
